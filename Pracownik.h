@@ -15,8 +15,9 @@ public:
 	Dokument *dodajBadanie(string imie, string nazwisko);
 	Dokument *dodajWynikBadania(string imie, string nazwisko);
 	void dodajTypBadania();
-	void dodajTerminBadania();
-	void wyszukajPacjenta();
+	void dodajDateBadania();
+	void dodajGodzineBadania();
 	void dodajPacjenta();
+	void dodajKomentarz();
 };
 

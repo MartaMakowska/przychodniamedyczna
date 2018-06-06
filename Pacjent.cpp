@@ -24,13 +24,12 @@ Pacjent::~Pacjent()
 	cout << endl << endl;
 	cout << "Menu" << endl;
 	while (wyjscie != 0) {
-		cout << "Jesli chcesz wybrac Modu³ gabinetu dyrektora przychodni wciœnij 1" << endl;
-		cout << "Jesli chcesz wybrac Modu³ gabinetu lekarskiego wciœnij 2" << endl;
-		cout << "Jesli chcesz wybrac Modu³ gabinetu specjalistycznego wciœnij 3" << endl;
-		cout << "Jesli chcesz wybrac Modu³ gabinetu zabiegowego wciœnij 4" << endl;
-		cout << "Jesli chcesz wybracModu³ rejestracji wciœnij 5" << endl;
-		cout << "Aby zakoñczyæ wybierz 0" << endl;
-
+		cout << "Je\230li chcesz wybra\206 Modu\210 gabinetu dyrektora przychodni wci\230nij 1" << endl;
+		cout << "Je\230li chcesz wybra\206 Modu\210 gabinetu lekarskiego wci\230nij 2" << endl;
+		cout << "Je\230li chcesz wybra\206 Modu\210 gabinetu specjalistycznego wci\230nij 3" << endl;
+		cout << "Je\230li chcesz wybra\206 Modu\210 gabinetu zabiegowego wci\230nij 4" << endl;
+		cout << "Je\230li chcesz wybra\206 Modu\210 rejestracji wci\230nij 5" << endl;
+		cout << "Aby zako\344czy\206 wybierz 0" << endl;
 		cin >> wyjscie;
 		switch (wyjscie) {
 		case 0: return;
@@ -55,10 +54,10 @@ Pacjent::~Pacjent()
  void Pacjent::gabinetzabiegowy() {
 	 int wyjscie = 9;
 	 cout << endl << endl;
-	 cout << "Gabinetzabiegowy" << endl;
+	 cout << "Gabinet zabiegowy" << endl;
 	 while (wyjscie != 0) {
-		 cout << "Wyœwietl historiê badañ okresowych wciœnij 1" << endl;
-		 cout << "Wyœwietl wynik badania okresowego wciœnij 2" << endl;
+		 cout << "Wy\230wietl histori\251 bada\344 okresowych wci\230nij 1" << endl;
+		 cout << "Wy\230wietl wynik badania okresowego wci\230nij 2" << endl;
 		 cout << "Aby cofnij wybierz 0" << endl;
 
 		 cin >> wyjscie;
@@ -91,16 +90,38 @@ Pacjent::~Pacjent()
 	 }
  }
  void Pacjent::wyswietlWynikBadania() { //wyswietl wybraæ co ma zobaczyæ 
- 
-	 cout << imie <<" "<< nazwisko<< " " << "wynik"<<endl;
+	 int i = 3;
+	 //cout << "Typ badania";
+	 if (implementation->dodajTypBadania() == "okresowe") {
+		 i +=7 ;
+	 }
+	 cout << "Typ badania: " << implementation->dodajTypBadania()<<endl;
+	 cout << "Data badania: " << implementation->dodajDateBadania() << endl;
+	 cout << "Godzina badania: " << implementation->dodajGodzineBadania() << endl;
+	 cout<<"Komentarz lekarza do badania: "<< implementation->dodajKomentarz() << endl;
+	 /*for (int j = 0; j < i; j++) {
+		 cout << " ";
+	 }*/
 	 system("pause");
 	 cout << endl;
  };
 
  void  Pacjent::wyswietlHistorieBadan() {
  
- 
-	 cout << imie << " " << nazwisko << " " << "historia" << endl;
+	 int i = 3;
+	 if (implementation->dodajTypBadania() == "okresowe") {
+		 i += 7;
+	 }
+	 cout << "Typ badania: " << implementation->dodajTypBadania() << endl;
+	 cout << "Data badania: " << implementation->dodajDateBadania() << endl;
+	 cout << "Godzina badania: " << implementation->dodajGodzineBadania() << endl;
+	/* for (int j = 0; j < i; j++) {
+	 cout << " ";
+	 }*/
+
+
+	/*cout<< "Data" << "       " << "Godzina" << endl;
+	 cout << implementation->dodajTypBadania() << "      " << implementation->dodajDateBadania() << "      " << implementation->dodajGodzineBadania() << endl;*/
 	 system("pause");
 	 cout << endl;
  

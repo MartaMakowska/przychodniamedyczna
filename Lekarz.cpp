@@ -17,27 +17,27 @@ Lekarz::~Lekarz()
 	}
 }
 
+//////////////////////?????????????????????
+void Lekarz::utworzHistorieBadan() {
+	//dodajPacjenta();
+	dodajTypBadania();
+	dodajDateBadania();
+	dodajGodzineBadania();
 
-void Lekarz::utworzHistorieBadan() {};
-
-/*
-Dokument  Lekarz::dodajBadanie() {
 };
-Dokument  Lekarz::dodajWynikBadania() {
-};
-*/
+//////////////////////?????????????????????
 
 void Lekarz::menu() {
 	int wyjscie = 9;
 	cout << endl << endl;
 	cout << "Menu" << endl;
 	while (wyjscie != 0) {
-		cout << "Je\230li chcesz wybra\206  Modu\210 gabinetu dyrektora przychodni wci\230nij 1" << endl;
-		cout << "Je\230li chcesz wybra\206  Modu\210 gabinetu lekarskiego wci\230nij 2" << endl;
-		cout << "Je\230li chcesz wybra\206  Modu\210 gabinetu specjalistycznego wci\230nij 3" << endl;
-		cout << "Je\230li chcesz wybra\206  Modu\210 gabinetu zabiegowego wci\230nij 4" << endl;
-		cout << "Je\230li chcesz wybra\206  Modu\210 rejestracji wci\230nij 5" << endl;
-		cout << "Aby zako\344czyæ wybierz 0" << endl;
+		cout << "Je\230li chcesz wybra\206 Modu\210 gabinetu dyrektora przychodni wci\230nij 1" << endl;
+		cout << "Je\230li chcesz wybra\206 Modu\210 gabinetu lekarskiego wci\230nij 2" << endl;
+		cout << "Je\230li chcesz wybra\206 Modu\210 gabinetu specjalistycznego wci\230nij 3" << endl;
+		cout << "Je\230li chcesz wybra\206 Modu\210 gabinetu zabiegowego wci\230nij 4" << endl;
+		cout << "Je\230li chcesz wybra\206 Modu\210 rejestracji wci\230nij 5" << endl;
+		cout << "Aby zako\344czy\206 wybierz 0" << endl;
 
 		cin >> wyjscie;
 		switch (wyjscie) {
@@ -65,7 +65,7 @@ void Lekarz::gabinetzabiegowy() {
 	while (wyjscie != 0) {
 		cout << "Utw\242rz histori\251 bada\344 okresowych wci\230nij 1" << endl;
 		cout << "Utw\242rz wynik badania okresowego wci\230nij 2" << endl;
-		cout << "Aby zako\344czyæ wybierz 0" << endl;
+		cout << "Aby zako\344czy\206 wybierz 0" << endl;
 
 		cin >> wyjscie;
 		switch (wyjscie) {
@@ -80,28 +80,28 @@ void Lekarz::gabinetzabiegowy() {
 		}
 	}
 };
+//////////////////////?????????????????????
 void  Lekarz::setopcja(int i) {
+	dodajPacjenta();
 	string imie;
 	string nazwisko;
-	cout << "Podaj nazwisko: ";
+	cout << "Podaj nazwisko pacjenta: ";
 	cin >> nazwisko;
-	cout << "Podaj imi\251: ";
+	cout << "Podaj imie pacjenta: ";
 	cin >> imie;
 	if (i == 1) {
+		utworzHistorieBadan();
 		implementation = dodajBadanie(imie,nazwisko);
+		//utworzHistorieBadan();
 	}
 	else if (i == 2) {
+		utworzHistorieBadan();
+		dodajKomentarz();
 		implementation = dodajWynikBadania(imie, nazwisko);
-		
-
 	}
 
-
-
-
-
 };
-
+//////////////////////?????????????????????
 
 
 

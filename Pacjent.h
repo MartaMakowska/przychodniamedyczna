@@ -14,6 +14,7 @@ public:
 	virtual void menu();
 	void gabinetzabiegowy();
 	void setopcja(int i);
+	
 private: 
 	
 		string	imie;

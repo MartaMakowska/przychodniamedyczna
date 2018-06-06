@@ -9,10 +9,14 @@ public:
 	Wyniki_badania_okresowego();
 	Wyniki_badania_okresowego(string imie, string nazwisko);
 	~Wyniki_badania_okresowego();
+	virtual string dodajTypBadania();
+	virtual string dodajDateBadania();
+	virtual string dodajGodzineBadania();
+	virtual string dodajKomentarz();
 private: 
 		string typBadania;
-		char dataBadania;
-		char godzinaBadania;
+		string dataBadania;
+		string godzinaBadania;
 		string imiePacjenta;
 		string nazwiskoPacjenta;
 		string komentarz;
