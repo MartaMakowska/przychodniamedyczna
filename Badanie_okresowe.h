@@ -7,11 +7,13 @@ class Badanie_okresowe : public Dokument
 public:
 	Badanie_okresowe(string imie, string nazwisko);
 	~Badanie_okresowe();
-	
+	virtual string gettypBadania();
+	virtual string getdataBadania();
+	virtual string getgodzinaBadania();
 private: 
 		string typBadania;
-		char dataBadania;
-		char godzinaBadania;
+		string dataBadania;
+		string godzinaBadania;
 		string imiePacjenta;
 		string nazwiskoPacjenta;
 };
