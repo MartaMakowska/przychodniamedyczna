@@ -21,8 +21,8 @@ Lekarz::~Lekarz()
 void Lekarz::utworzHistorieBadan() {
 	//dodajPacjenta();
 	dodajTypBadania();
-	dodajDateBadania();
-	dodajGodzineBadania();
+	dodajTerminBadania();
+	//dodajGodzineBadania();
 
 };
 //////////////////////?????????????????????
