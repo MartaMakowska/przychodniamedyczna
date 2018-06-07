@@ -74,10 +74,7 @@ Pacjent::~Pacjent()
 	 }
  };
 
-
- ////////////////////////////////////////////////////////////////////////
  void Pacjent::setopcja(int i) { 
-	 //uzupelnij obiekty  (implementation)
 
 	 if (i == 1) {
 		 implementation  = new Badanie_okresowe(imie, nazwisko);
@@ -91,7 +88,6 @@ Pacjent::~Pacjent()
  }
  void Pacjent::wyswietlWynikBadania() { //wyswietl wybraæ co ma zobaczyæ 
 	 int i = 3;
-	 //cout << "Typ badania";
 	 if (implementation->dodajTypBadania() == "okresowe") {
 		 i +=7 ;
 	 }
@@ -99,9 +95,6 @@ Pacjent::~Pacjent()
 	 cout << "Data badania: " << implementation->dodajDateBadania() << endl;
 	 cout << "Godzina badania: " << implementation->dodajGodzineBadania() << endl;
 	 cout<<"Komentarz lekarza do badania: "<< implementation->dodajKomentarz() << endl;
-	 /*for (int j = 0; j < i; j++) {
-		 cout << " ";
-	 }*/
 	 system("pause");
 	 cout << endl;
  };
@@ -115,13 +108,6 @@ Pacjent::~Pacjent()
 	 cout << "Typ badania: " << implementation->dodajTypBadania() << endl;
 	 cout << "Data badania: " << implementation->dodajDateBadania() << endl;
 	 cout << "Godzina badania: " << implementation->dodajGodzineBadania() << endl;
-	/* for (int j = 0; j < i; j++) {
-	 cout << " ";
-	 }*/
-
-
-	/*cout<< "Data" << "       " << "Godzina" << endl;
-	 cout << implementation->dodajTypBadania() << "      " << implementation->dodajDateBadania() << "      " << implementation->dodajGodzineBadania() << endl;*/
 	 system("pause");
 	 cout << endl;
  
