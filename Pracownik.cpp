@@ -16,17 +16,20 @@ void Pracownik::dodajTypBadania() {
 	cout << "Podaj typ badania: ";
 	cin >> typBadania;
 };
-void Pracownik::dodajDateBadania() {
+void Pracownik::dodajTerminBadania() {
 	string dataBadania;
+	string godzinaBadania;
 	cout << "Podaj date badania: ";
 	cin >> dataBadania;
-
-};
-void Pracownik::dodajGodzineBadania() {
-	string godzinaBadania;
 	cout << "Podaj godzine badania: ";
 	cin >> godzinaBadania;
+
 };
+//void Pracownik::dodajGodzineBadania() {
+	/*string godzinaBadania;
+	cout << "Podaj godzine badania: ";
+	cin >> godzinaBadania;*/
+//};
 void Pracownik::dodajPacjenta() {
 	cout << "Podaj dane pacjenta" << endl;
 };
