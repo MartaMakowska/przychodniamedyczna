@@ -3,22 +3,22 @@
 #include "Badanie_okresowe.h"
 #include "Wyniki_badania_okresowego.h"
 
-Lekarz::Lekarz()
+Modu³_gabinetu_zabiegowego::Lekarz::Lekarz()
 {
-	implementation = 0;
+	implementation = NULL;
 }
 
 
-Lekarz::~Lekarz()
+Modu³_gabinetu_zabiegowego::Lekarz::~Lekarz()
 {
-	if (implementation != 0) {
+	if (implementation != NULL) {
 
 		delete(implementation);
 	}
 }
 
 //////////////////////?????????????????????
-void Lekarz::utworzHistorieBadan() {
+void Modu³_gabinetu_zabiegowego::Lekarz::utworzHistorieBadan() {
 	//dodajPacjenta();
 	dodajTypBadania();
 	dodajTerminBadania();
@@ -27,11 +27,11 @@ void Lekarz::utworzHistorieBadan() {
 };
 //////////////////////?????????????????????
 
-void Lekarz::menu() {
-	int wyjscie = 9;
+void Modu³_gabinetu_zabiegowego::Lekarz::menu() {
+	int wyjscie = zostan;
 	cout << endl << endl;
 	cout << "Menu" << endl;
-	while (wyjscie != 0) {
+	while (wyjscie != Brak) {
 		cout << "Je\230li chcesz wybra\206 Modu\210 gabinetu dyrektora przychodni wci\230nij 1" << endl;
 		cout << "Je\230li chcesz wybra\206 Modu\210 gabinetu lekarskiego wci\230nij 2" << endl;
 		cout << "Je\230li chcesz wybra\206 Modu\210 gabinetu specjalistycznego wci\230nij 3" << endl;
@@ -58,11 +58,11 @@ void Lekarz::menu() {
 		}
 	}
 };
-void Lekarz::gabinetzabiegowy() {
-	int wyjscie = 9;
+void Modu³_gabinetu_zabiegowego::Lekarz::gabinetzabiegowy() {
+	int wyjscie = zostan;
 	cout << endl << endl;
 	cout << "Gabinet zabiegowy" << endl;
-	while (wyjscie != 0) {
+	while (wyjscie != Brak) {
 		cout << "Utw\242rz histori\251 bada\344 okresowych wci\230nij 1" << endl;
 		cout << "Utw\242rz wynik badania okresowego wci\230nij 2" << endl;
 		cout << "Aby zako\344czy\206 wybierz 0" << endl;
@@ -71,9 +71,9 @@ void Lekarz::gabinetzabiegowy() {
 		switch (wyjscie) {
 		case 0: return;
 			break;
-		case 1: setopcja(1);
+		case 1: setopcja(badanie);
 			break;
-		case 2: setopcja(2);
+		case 2: setopcja(wynik);
 			break;
 		default:
 			break;
@@ -81,7 +81,7 @@ void Lekarz::gabinetzabiegowy() {
 	}
 };
 //////////////////////?????????????????????
-void  Lekarz::setopcja(int i) {
+void  Modu³_gabinetu_zabiegowego::Lekarz::setopcja(int funkcjonalosc) {
 	dodajPacjenta();
 	string imie;
 	string nazwisko;
@@ -89,12 +89,12 @@ void  Lekarz::setopcja(int i) {
 	cin >> nazwisko;
 	cout << "Podaj imie pacjenta: ";
 	cin >> imie;
-	if (i == 1) {
+	if (funkcjonalosc == badanie) {
 		utworzHistorieBadan();
 		implementation = dodajBadanie(imie,nazwisko);
 		//utworzHistorieBadan();
 	}
-	else if (i == 2) {
+	else if (funkcjonalosc == wynik) {
 		utworzHistorieBadan();
 		dodajKomentarz();
 		implementation = dodajWynikBadania(imie, nazwisko);
