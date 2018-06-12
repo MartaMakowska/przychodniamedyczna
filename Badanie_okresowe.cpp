@@ -2,7 +2,7 @@
 #include "Badanie_okresowe.h"
 
 
-Badanie_okresowe::Badanie_okresowe(string imie, string nazwisko)
+Modu³_gabinetu_zabiegowego::Badanie_okresowe::Badanie_okresowe(string imie, string nazwisko)
 {
 
 	imiePacjenta=imie;
@@ -13,20 +13,18 @@ Badanie_okresowe::Badanie_okresowe(string imie, string nazwisko)
 }
 
 
-Badanie_okresowe::~Badanie_okresowe()
+Modu³_gabinetu_zabiegowego::Badanie_okresowe::~Badanie_okresowe()
 {
 }
-string Badanie_okresowe::dodajTypBadania() { //dodac do diagramu 	dodaj czy get??		
+string Modu³_gabinetu_zabiegowego::Badanie_okresowe::dodajTypBadania() {
 	return typBadania;
 	
 };
-string Badanie_okresowe::dodajDateBadania() {
+string Modu³_gabinetu_zabiegowego::Badanie_okresowe::dodajDateBadania() {
 	return dataBadania;
 	
 };
-string Badanie_okresowe::dodajGodzineBadania() {
+string Modu³_gabinetu_zabiegowego::Badanie_okresowe::dodajGodzineBadania() {
 
-//	cout << "Podaj godzine badania: ";
-	//cin >> godzinaBadania;
 	return godzinaBadania;
 };
